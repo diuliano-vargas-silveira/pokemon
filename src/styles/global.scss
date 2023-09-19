@@ -1,0 +1,59 @@
+@import url(./styles.scss);
+
+@mixin default-section-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@mixin default-pokemon-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito';
+}
+
+body,
+img {
+  width: 100%;
+}
+
+.page {
+  @include default-section-page();
+
+  height: 100vh;
+  flex-direction: column;
+
+  &__main {
+    padding: 0 3%;
+    margin-top: 36px;
+  }
+
+  &__header {
+    @include default-section-page();
+    padding: 10px 3%;
+    justify-content: space-between;
+    background-color: red;
+  }
+
+  &__title {
+    @include default-pokemon-title();
+    text-decoration: none;
+  }
+
+  &__footer {
+    @include default-section-page();
+    @include default-pokemon-title();
+    justify-content: center;
+
+    padding: 20px 3%;
+    margin-top: 36px;
+    background-color: red;
+  }
+}
